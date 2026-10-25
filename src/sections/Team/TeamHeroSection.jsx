@@ -17,7 +17,6 @@ const TeamHeroSection = ({ isEventSection = false }) => {
       {isEventSection && (
         <div className="team-hero-header">
           <h2 className="team-hero-title">Team 2025</h2>
-          <p className="team-hero-subtitle">The team behind Drishti</p>
         </div>
       )}
 
