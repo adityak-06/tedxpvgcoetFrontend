@@ -1,14 +1,14 @@
 .theseus-illusions {
   padding-top: clamp(3.5rem, 6vw, 5.5rem);
   padding-right: clamp(1rem, 4vw, 3.5rem);
-  padding-bottom: clamp(1.5rem, 3.5vw, 2.5rem);
+  padding-bottom: clamp(1rem, 2.5vw, 2rem);
   padding-left: clamp(1rem, 4vw, 3.5rem);
   color: #f8f6f2;
-  background:
-    radial-gradient(ellipse at 50% 100%, rgb(225 6 0 / 14%) 0%, transparent 50%),
+  background-color: #0c0d0f;
+  background-image:
+    radial-gradient(ellipse at 50% 100%, rgb(225 6 0 / 12%) 0%, transparent 65%),
     radial-gradient(circle at 12% 8%, rgb(131 20 24 / 22%), transparent 32rem),
-    radial-gradient(circle at 88% 45%, rgb(225 6 0 / 8%), transparent 28rem),
-    #0c0d0f;
+    radial-gradient(circle at 88% 45%, rgb(225 6 0 / 8%), transparent 28rem);
 }
 
 .theseus-illusions__header,

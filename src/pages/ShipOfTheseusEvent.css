@@ -2,7 +2,7 @@
   width: 100%;
   margin: 0;
   overflow: clip;
-  background: #050607;
+  background: #0c0d0f;
   color: #fff;
 }
 
@@ -409,5 +409,22 @@
     mask-image: none !important;
     -webkit-mask-image: none !important;
     animation: none !important;
+  }
+}
+
+/* Cohesive transition into Footer Section */
+@media (min-width: 1200px) {
+  .theseus-event-page .footer {
+    background-color: #0c0d0f;
+    background-image: radial-gradient(
+      ellipse at 50% 0%,
+      rgb(225 6 0 / 12%) 0%,
+      transparent 65%
+    );
+    margin-top: -1px;
+  }
+
+  .theseus-event-page .footer-background-image {
+    filter: drop-shadow(0 -4px 18px rgba(225, 6, 0, 0.3));
   }
 }
