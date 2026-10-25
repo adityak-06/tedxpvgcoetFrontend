@@ -9,6 +9,7 @@ import FooterSection from "../sections/Common/FooterSection";
 import leapImg from "../assets/Event/Take-the-leap-bg-1.webp";
 import avantGardeImg from "../assets/backgrounds/AvantGarde-bg.webp";
 import punarutthanImg from "../assets/backgrounds/Punarutthan-bg.webp";
+import drishtiImg from "../assets/Event/Drishti-bg.webp";
 
 const pastEvents = [
   {
@@ -33,10 +34,19 @@ const pastEvents = [
     id: "punarutthan",
     title: "Punarutthan",
     year: "2024",
-    desc: "“Punarutthan” stands for revival and renewal, drawing from deep cultural roots. It invites us to rethink, rebuild, and reimagine a better future.",
+    desc: '“Punarutthan” stands for revival and renewal, drawing from deep cultural roots. It invites us to rethink, rebuild, and reimagine a better future.',
     image: punarutthanImg,
     link: "/events/punarutthan",
     alt: "Punarutthan Event",
+  },
+  {
+    id: "drishti",
+    title: "Drishti",
+    year: "2025",
+    desc: '“Drishti” symbolizes vision and perspective—a journey into awareness, perception, and the quiet clarity that emerges when we look beyond distractions and surface-level truths.',
+    image: drishtiImg,
+    link: "/events/drishti",
+    alt: "Drishti Event",
   },
 ];
 

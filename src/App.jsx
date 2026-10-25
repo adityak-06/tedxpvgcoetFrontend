@@ -18,7 +18,7 @@ const AvantGarde = lazy(() => import("./pages/AvantGarde"));
 const Team = lazy(() => import("./pages/Team"));
 const TeamGrid = lazy(() => import("./sections/Team/TeamGrid"));
 const TakeTheLeap = lazy(() => import("./pages/TakeTheLeap"));
-const ThemePage = lazy(() => import("./pages/ThemePage"));
+const Drishti = lazy(() => import("./pages/Drishti"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const InternalBillsPage = lazy(() => import("./pages/InternalBillsPage"));
 const ShipExperience = lazy(() => import("./pages/ShipExperience"));
@@ -69,11 +69,12 @@ function App() {
 
           <Suspense fallback={<Loader />}>
             <Routes>
-              <Route path="/" element={<ThemePage />} />
+              <Route path="/" element={<ShipOfTheseusEvent />} />
               <Route path="/speaker" element={<SpeakerForm />} />
               <Route path="/sponsor" element={<SponsorForm />} />
 
               <Route path="/events" element={<Event />} />
+              <Route path="/events/drishti" element={<Drishti />} />
               <Route path="/events/punarutthan" element={<Punarutthan />} />
               <Route path="/events/avant-garde" element={<AvantGarde />} />
               <Route path="/events/take-the-leap" element={<TakeTheLeap />} />
@@ -122,6 +123,7 @@ function App() {
               <Route path="/about" element={<Home />} />
               <Route path="/ship" element={<ShipExperience />} />
               <Route path="/ship-of-theseus" element={<ShipOfTheseusEvent />} />
+              <Route path="/theme" element={<Drishti />} />
               <Route path="/feedback" element={<FeedbackRedirect />} />
               <Route path="/cam" element={<CamRedirect />} />
               <Route path="/ticket" element={<TicketRedirect />} />
