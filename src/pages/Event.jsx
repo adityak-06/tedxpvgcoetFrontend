@@ -17,7 +17,7 @@ const pastEvents = [
     year: "2020",
     desc: "Take The Leap! encourages us to unleash passion, challenge limits, and discover life's full potential.",
     image: leapImg,
-    link: "/events/TakeTheLeap",
+    link: "/events/take-the-leap",
     alt: "Take the Leap Event",
   },
   {
@@ -26,16 +26,16 @@ const pastEvents = [
     year: "2021",
     desc: '"Avant Garde" embraces bold, unconventional ideas and celebrates those ahead of their time. It invites us to think differently and challenge the norm.',
     image: avantGardeImg,
-    link: "/events/AvantGarde",
+    link: "/events/avant-garde",
     alt: "Avant Garde Event",
   },
   {
     id: "punarutthan",
     title: "Punarutthan",
-    year: "2023",
+    year: "2024",
     desc: "“Punarutthan” stands for revival and renewal, drawing from deep cultural roots. It invites us to rethink, rebuild, and reimagine a better future.",
     image: punarutthanImg,
-    link: "/events/Punarutthan",
+    link: "/events/punarutthan",
     alt: "Punarutthan Event",
   },
 ];
