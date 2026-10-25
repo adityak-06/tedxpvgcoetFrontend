@@ -45,20 +45,13 @@ const TeamHeroSection = ({ isEventSection = false }) => {
         />
       </div>
 
-      <div className="team-hero-actions">
-        <button
-          type="button"
-          className="team-see-image-btn"
-          onClick={() => setModalOpen(true)}
-        >
-          See Image
-        </button>
-        {isEventSection && (
+      {isEventSection && (
+        <div className="team-hero-actions">
           <Link to="/team-2025" className="team-view-page-btn">
             Meet the Team
           </Link>
-        )}
-      </div>
+        </div>
+      )}
 
       <div className="team-red-line"></div>
 
