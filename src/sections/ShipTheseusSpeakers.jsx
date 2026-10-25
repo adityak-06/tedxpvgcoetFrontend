@@ -10,18 +10,43 @@ import speaker07 from "../assets/shipOfThesus/speakers/speaker-07.png";
 import speaker08 from "../assets/shipOfThesus/speakers/speaker-08.png";
 
 const speakers = [
-  { name: "Sukrut Deo", title: "Theatre & Comedy", image: speaker01, trimSideBars: true },
-  { name: "Shama Bhate", title: "Kathak Exponent", image: speaker02, trimSideBars: true },
+  {
+    name: "Sukrut Deo",
+    title: "Theatre & Comedy",
+    image: speaker01,
+    trimSideBars: true,
+  },
+  {
+    name: "Shama Bhate",
+    title: "Kathak Exponent",
+    image: speaker02,
+    trimSideBars: true,
+  },
   { name: "Sanskriti Balgude", title: "Arts & Culture", image: speaker03 },
-  { name: "Shruti Kotwal", title: "Sports", image: speaker04, trimSideBars: true },
+  {
+    name: "Shruti Kotwal",
+    title: "Sports",
+    image: speaker04,
+    trimSideBars: true,
+  },
   {
     name: "Lt. Cdr. Nikhil Kumar Chandrakala",
     title: "Armed Forces",
     image: speaker05,
     trimSideBars: true,
   },
-  { name: "Parimal Phadke", title: "Bharatanatyam Virtuoso", image: speaker06, trimSideBars: true },
-  { name: "Dr. Ravinder Singal", title: "Civil Services", image: speaker07, trimSideBars: true },
+  {
+    name: "Parimal Phadke",
+    title: "Bharatanatyam Virtuoso",
+    image: speaker06,
+    trimSideBars: true,
+  },
+  {
+    name: "Dr. Ravinder Singal",
+    title: "Civil Services",
+    image: speaker07,
+    trimSideBars: true,
+  },
   {
     name: "Dr. Satilal Patil",
     title: "Science & Entrepreneurship",
@@ -30,7 +55,10 @@ const speakers = [
 ];
 
 const ShipTheseusSpeakers = () => (
-  <section className="theseus-speakers" aria-labelledby="theseus-speakers-title">
+  <section
+    className="theseus-speakers"
+    aria-labelledby="theseus-speakers-title"
+  >
     <header className="theseus-speakers__header">
       <h2 className="theseus-speakers__title" id="theseus-speakers-title">
         <span>MEET THE</span>

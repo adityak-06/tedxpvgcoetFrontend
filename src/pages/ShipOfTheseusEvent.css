@@ -248,7 +248,7 @@
   letter-spacing: 0.02em;
   line-height: 1.15;
   white-space: nowrap;
-    text-shadow: 0 2px 12px rgb(0 0 0 / 70%);
+  text-shadow: 0 2px 12px rgb(0 0 0 / 70%);
 }
 
 .theseus-event-content__corner-label--top {

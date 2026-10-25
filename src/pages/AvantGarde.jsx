@@ -5,7 +5,6 @@ import AvantGardeTeamSection from "../sections/Events/AvantGarde/AvantGardeTeamS
 import SponsorsSection from "../sections/Events/Common/SponsorSection";
 import "../sections/Events/AvantGarde/AvantGardeSponsorSection.css";
 
-
 const avantGardeSponsors = [
   {
     name: "Muellners",
@@ -20,9 +19,7 @@ const avantGardeSponsors = [
 const AvantGarde = () => {
   return (
     <>
-      
-        <title>Avant Garde | TEDxPVGCOET</title>
-      
+      <title>Avant Garde | TEDxPVGCOET</title>
 
       <div id="page-top" />
 

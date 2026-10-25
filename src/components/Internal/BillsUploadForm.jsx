@@ -470,9 +470,8 @@ export default function BillsUploadForm({
 
   return (
     <div style={styles.wrapper}>
-      
-        <title>Internal Bills | TEDxPVGCOET</title>
-      
+      <title>Internal Bills | TEDxPVGCOET</title>
+
       <style>{`
         @keyframes dropIn {
           0% { opacity: 0; transform: translateY(-30px) scale(0.98); }

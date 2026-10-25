@@ -42,7 +42,7 @@ const ShipOfTheseusEvent = () => {
             hero.classList.remove("theseus-event-hero--revealed");
           }
         },
-        { threshold: [0, 0.15] }
+        { threshold: [0, 0.15] },
       );
       observer.observe(image);
       hero.classList.add("theseus-event-hero--reveal-ready");
@@ -50,7 +50,7 @@ const ShipOfTheseusEvent = () => {
       observer?.disconnect();
       hero.classList.remove(
         "theseus-event-hero--reveal-ready",
-        "theseus-event-hero--revealed"
+        "theseus-event-hero--revealed",
       );
       return undefined;
     }
@@ -59,7 +59,7 @@ const ShipOfTheseusEvent = () => {
       observer.disconnect();
       hero.classList.remove(
         "theseus-event-hero--reveal-ready",
-        "theseus-event-hero--revealed"
+        "theseus-event-hero--revealed",
       );
     };
   }, []);
@@ -89,7 +89,7 @@ const ShipOfTheseusEvent = () => {
           video.pause();
         }
       },
-      { threshold: [0, 0.2] }
+      { threshold: [0, 0.2] },
     );
 
     const handleMotionPreference = () => {
@@ -125,10 +125,7 @@ const ShipOfTheseusEvent = () => {
         }}
       >
         <picture className="theseus-event-hero__picture">
-          <source
-            media="(max-width: 600px)"
-            srcSet={shipTheseusHeroPortrait}
-          />
+          <source media="(max-width: 600px)" srcSet={shipTheseusHeroPortrait} />
           <img
             ref={imageRef}
             className="theseus-event-hero__image"
@@ -140,11 +137,7 @@ const ShipOfTheseusEvent = () => {
         <div className="theseus-event-hero__shade" aria-hidden="true" />
         <h1 className="theseus-event-sr-only">Ship of Theseus</h1>
         <div className="theseus-event-booking">
-          <button
-            className="book-now-btn"
-            type="button"
-            aria-disabled="true"
-          >
+          <button className="book-now-btn" type="button" aria-disabled="true">
             BOOK NOW
           </button>
         </div>
@@ -168,7 +161,7 @@ const ShipOfTheseusEvent = () => {
               onError={() => setVideoError(true)}
             >
               <source src={themeVideo} type="video/mp4" />
-              Your browser cannot play this MP4 video. {" "}
+              Your browser cannot play this MP4 video.{" "}
               <a href={themeVideo}>Open the video file</a>.
             </video>
           </div>
@@ -182,7 +175,7 @@ const ShipOfTheseusEvent = () => {
           </a>
           {videoError && (
             <p className="theseus-event-video__fallback" role="status">
-              Video playback is unavailable in this browser. {" "}
+              Video playback is unavailable in this browser.{" "}
               <a href={themeVideo} target="_blank" rel="noreferrer">
                 Open the video file
               </a>
@@ -198,8 +191,8 @@ const ShipOfTheseusEvent = () => {
           "--theseus-content-art": `url("${shipTheseusContentBackground}")`,
         }}
       >
-          <span className="theseus-event-content__corner-label theseus-event-content__corner-label--top">
-            ...ORIGIN
+        <span className="theseus-event-content__corner-label theseus-event-content__corner-label--top">
+          ...ORIGIN
         </span>
         <div className="theseus-event-content__copy">
           <h2 id="theseus-event-content-title">The Ship of Theseus</h2>
@@ -230,8 +223,8 @@ const ShipOfTheseusEvent = () => {
             anything—or anyone—to remain the same at all.
           </p>
         </div>
-          <span className="theseus-event-content__corner-label theseus-event-content__corner-label--bottom">
-            BECOMING...
+        <span className="theseus-event-content__corner-label theseus-event-content__corner-label--bottom">
+          BECOMING...
         </span>
       </section>
       <ShipTheseusSpeakers />

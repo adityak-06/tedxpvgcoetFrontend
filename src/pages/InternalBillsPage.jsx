@@ -110,9 +110,8 @@ export default function InternalBillsPage() {
   if (view === "dashboard") {
     return (
       <div style={dashboardStyles.wrapper}>
-        
-          <title>Portal | TEDxPVGCOETM</title>
-        
+        <title>Portal | TEDxPVGCOETM</title>
+
         <video
           src={bgVideo}
           autoPlay
@@ -212,9 +211,8 @@ export default function InternalBillsPage() {
   if (view === "qrcode") {
     return (
       <div className="ui-hero-container">
-        
-          <title>QR Generator | TEDxPVGCOETM</title>
-        
+        <title>QR Generator | TEDxPVGCOETM</title>
+
         <video
           src={bgVideo}
           autoPlay

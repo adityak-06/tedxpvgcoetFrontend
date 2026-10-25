@@ -7,9 +7,8 @@ function CamRedirect() {
 
   return (
     <>
-      
-        <title>Redirecting... | TEDxPVGCOET</title>
-      
+      <title>Redirecting... | TEDxPVGCOET</title>
+
       <p>Redirecting...</p>
     </>
   );

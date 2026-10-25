@@ -58,13 +58,27 @@
   vertical-align: top;
 }
 
-.theseus-illusions__card--1 { --card-ratio: 454 / 626; }
-.theseus-illusions__card--2 { --card-ratio: 736 / 914; }
-.theseus-illusions__card--3 { --card-ratio: 735 / 817; }
-.theseus-illusions__card--4 { --card-ratio: 1; }
-.theseus-illusions__card--5 { --card-ratio: 1; }
-.theseus-illusions__card--6 { --card-ratio: 450 / 640; }
-.theseus-illusions__card--7 { --card-ratio: 736 / 589; }
+.theseus-illusions__card--1 {
+  --card-ratio: 454 / 626;
+}
+.theseus-illusions__card--2 {
+  --card-ratio: 736 / 914;
+}
+.theseus-illusions__card--3 {
+  --card-ratio: 735 / 817;
+}
+.theseus-illusions__card--4 {
+  --card-ratio: 1;
+}
+.theseus-illusions__card--5 {
+  --card-ratio: 1;
+}
+.theseus-illusions__card--6 {
+  --card-ratio: 450 / 640;
+}
+.theseus-illusions__card--7 {
+  --card-ratio: 736 / 589;
+}
 
 .theseus-illusions__image {
   position: absolute;

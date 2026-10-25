@@ -6,9 +6,8 @@ import FooterSection from "../sections/Common/FooterSection";
 const SponsorForm = () => {
   return (
     <div className="hero-container-sponsor">
-      
-        <title>Partner With Us | TEDxPVGCOET</title>
-      
+      <title>Partner With Us | TEDxPVGCOET</title>
+
       <video autoPlay loop muted playsInline className="hero-video-sponsor">
         <source src={backgroundVideo} type="video/mp4" />
         Your browser does not support the video tag.

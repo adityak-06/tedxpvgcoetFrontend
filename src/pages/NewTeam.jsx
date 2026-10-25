@@ -82,9 +82,7 @@ const NewTeam = () => {
 
   return (
     <div className="new-committee-page" id="page-top">
-      
-        <title>Committee | TEDxPVGCOET</title>
-      
+      <title>Committee | TEDxPVGCOET</title>
 
       {/* Desktop Background */}
       <div

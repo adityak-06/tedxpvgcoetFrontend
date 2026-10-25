@@ -84,9 +84,8 @@ const departments = [
 const Team = () => {
   return (
     <div className="team-page" id="page-top">
-      
-        <title>Team | TEDxPVGCOET</title>
-      
+      <title>Team | TEDxPVGCOET</title>
+
       <TeamHeroSection />
       {departments.map((dept) => (
         <TeamDepartmentSection key={dept.id} {...dept} />

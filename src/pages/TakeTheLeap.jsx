@@ -7,9 +7,8 @@ import "../index.css";
 const TakeTheLeap = () => {
   return (
     <div className="bg" id="page-top">
-      
-        <title>Take The Leap | TEDxPVGCOET</title>
-      
+      <title>Take The Leap | TEDxPVGCOET</title>
+
       <TakeTheLeapHeroSection />
       <TakeTheLeapTalksSection />
       <FooterSection />

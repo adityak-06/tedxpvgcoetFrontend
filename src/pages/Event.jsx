@@ -42,9 +42,8 @@ const pastEvents = [
 const Event = () => {
   return (
     <div id="page-top" className="event-page">
-      
-        <title>Events | TEDxPVGCOET</title>
-      
+      <title>Events | TEDxPVGCOET</title>
+
       <ScrollToTop />
       <EventHeroSection />
       {pastEvents.map((event) => (

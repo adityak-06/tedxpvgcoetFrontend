@@ -49,13 +49,11 @@ export default function InternalQRPage() {
   if (view === "qr") {
     return (
       <div className="ui-hero-container">
-        
-          <title>QR Code Generator | TEDxPVGCOET</title>
-          <meta
-            name="description"
-            content="Generate high-resolution branded TEDx QR codes."
-          />
-        
+        <title>QR Code Generator | TEDxPVGCOET</title>
+        <meta
+          name="description"
+          content="Generate high-resolution branded TEDx QR codes."
+        />
 
         <video
           src={bgVideo}

@@ -420,9 +420,8 @@ export default function BridgekeeperAuth({ onAuthorized }) {
 
   return (
     <div style={styles.wrapper}>
-      
-        <title>Internal | TEDxPVGCOETM</title>
-      
+      <title>Internal | TEDxPVGCOETM</title>
+
       <style>{`
         @keyframes dropIn {
           0% { opacity: 0; transform: translateY(-20px); }

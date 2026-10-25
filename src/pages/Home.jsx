@@ -9,9 +9,8 @@ import GallerySection from "../sections/Common/GallerySection";
 const Home = () => {
   return (
     <div id="page-top">
-      
-        <title>About | TEDxPVGCOET</title>
-      
+      <title>About | TEDxPVGCOET</title>
+
       <HeroSection />
       <AboutTED />
       <AboutTEDx />

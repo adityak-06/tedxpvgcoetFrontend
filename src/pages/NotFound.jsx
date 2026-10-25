@@ -9,9 +9,8 @@ const NotFound = () => {
 
   return (
     <div className="hero-container1" style={styles.wrapper}>
-      
-        <title>404 - Page Not Found | TEDxPVGCOET</title>
-      
+      <title>404 - Page Not Found | TEDxPVGCOET</title>
+
       <style>{`
         @keyframes dropIn {
           0% {

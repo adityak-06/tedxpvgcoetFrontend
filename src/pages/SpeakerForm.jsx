@@ -104,9 +104,8 @@ const SpeakerForm = () => {
 
   return (
     <div className="hero-container1">
-      
-        <title>Speaker Nomination | TEDxPVGCOET</title>
-      
+      <title>Speaker Nomination | TEDxPVGCOET</title>
+
       <video autoPlay loop muted playsInline className="hero-video1">
         <source src={backgroundVideo} type="video/mp4" />
         Your browser does not support the video tag.

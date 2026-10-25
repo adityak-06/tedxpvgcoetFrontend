@@ -17,8 +17,12 @@
   box-shadow: 0 12px 34px rgb(0 0 0 / 34%);
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
-  transition: opacity 180ms ease, transform 220ms ease, border-color 220ms ease,
-    box-shadow 220ms ease, visibility 0s linear 180ms;
+  transition:
+    opacity 180ms ease,
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    visibility 0s linear 180ms;
 }
 
 .ship-experience-card:hover {
@@ -36,7 +40,9 @@
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 120ms ease, visibility 0s linear 120ms;
+  transition:
+    opacity 120ms ease,
+    visibility 0s linear 120ms;
 }
 
 .ship-experience-card__thumbnail {

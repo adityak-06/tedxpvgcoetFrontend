@@ -8,9 +8,8 @@ import DrishtiVideo from "../sections/Events/Drishti/DrishtiVideo";
 const ThemePage = () => {
   return (
     <>
-      
-        <title>Home | TEDxPVGCOET</title>
-      
+      <title>Home | TEDxPVGCOET</title>
+
       <Booknow />
       <DrishtiVideo />
       <DrishtiSection />

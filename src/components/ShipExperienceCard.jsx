@@ -7,8 +7,9 @@ import "./ShipExperienceCard.css";
 const ShipExperienceCard = ({ heroRef }) => {
   const videoRef = useRef(null);
   const [heroVisible, setHeroVisible] = useState(true);
-  const [reducedMotion, setReducedMotion] = useState(() =>
-    window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false
+  const [reducedMotion, setReducedMotion] = useState(
+    () =>
+      window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false,
   );
 
   useEffect(() => {
@@ -18,10 +19,11 @@ const ShipExperienceCard = ({ heroRef }) => {
     const updateVisibility = (isVisible) => setHeroVisible(isVisible);
     if ("IntersectionObserver" in window) {
       const observer = new IntersectionObserver(
-        ([entry]) => updateVisibility(
-          entry.isIntersecting && entry.intersectionRatio >= 0.05
-        ),
-        { threshold: [0, 0.05] }
+        ([entry]) =>
+          updateVisibility(
+            entry.isIntersecting && entry.intersectionRatio >= 0.05,
+          ),
+        { threshold: [0, 0.05] },
       );
       observer.observe(hero);
       return () => observer.disconnect();
@@ -83,11 +85,15 @@ const ShipExperienceCard = ({ heroRef }) => {
         <span className="ship-experience-card__thumbnail-shade" />
       </span>
       <span className="ship-experience-card__copy">
-        <span className="ship-experience-card__eyebrow">THE SHIP OF THESEUS</span>
+        <span className="ship-experience-card__eyebrow">
+          THE SHIP OF THESEUS
+        </span>
         <span className="ship-experience-card__title">
           Click here to see the journey
         </span>
-        <span className="ship-experience-card__support" aria-hidden="true">↗</span>
+        <span className="ship-experience-card__support" aria-hidden="true">
+          ↗
+        </span>
       </span>
     </Link>
   );

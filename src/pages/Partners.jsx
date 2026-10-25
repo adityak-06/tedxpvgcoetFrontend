@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import SponsorFeedbackSection from "../sections/Forms/SponsorFeedbackSection";
@@ -67,13 +66,11 @@ const Partners = () => {
 
   return (
     <main className="partners-page">
-      
-        <title>Our Partners | TEDxPVGCOET</title>
-        <meta
-          name="description"
-          content="Meet the partners who help TEDxPVGCOET bring ideas worth spreading to life."
-        />
-      
+      <title>Our Partners | TEDxPVGCOET</title>
+      <meta
+        name="description"
+        content="Meet the partners who help TEDxPVGCOET bring ideas worth spreading to life."
+      />
 
       <section className="partners-hero">
         <p className="partners-eyebrow">TEDxPVGCOET</p>

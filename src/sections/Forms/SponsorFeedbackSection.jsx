@@ -64,8 +64,8 @@ const SponsorFeedbackSection = () => {
           <div className="ui-header-title-group">
             <h2 className="ui-gradient-title">Our Previous Sponsors</h2>
             <p className="ui-subtitle">
-              Hear what our previous sponsors have to say about their
-              experience with TEDxPVGCOET.
+              Hear what our previous sponsors have to say about their experience
+              with TEDxPVGCOET.
             </p>
           </div>
         </div>
@@ -81,7 +81,9 @@ const SponsorFeedbackSection = () => {
                   role="button"
                   tabIndex={0}
                   aria-pressed={isSelected}
-                  onClick={() => setSelectedSponsor(isSelected ? null : sponsor.name)}
+                  onClick={() =>
+                    setSelectedSponsor(isSelected ? null : sponsor.name)
+                  }
                   onKeyDown={(event) => {
                     if (event.key === "Enter" || event.key === " ") {
                       event.preventDefault();

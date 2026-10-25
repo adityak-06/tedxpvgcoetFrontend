@@ -126,12 +126,14 @@ const ShipTheseusIllusions = () => {
               if (event.pointerType !== "touch" || !touchStart.current) return;
               const moved = Math.hypot(
                 event.clientX - touchStart.current.x,
-                event.clientY - touchStart.current.y
+                event.clientY - touchStart.current.y,
               );
               touchStart.current = null;
               if (moved < 10) toggleCard(index);
             }}
-            onPointerCancel={() => { touchStart.current = null; }}
+            onPointerCancel={() => {
+              touchStart.current = null;
+            }}
             onKeyDown={(event) => {
               if (event.key === "Enter" || event.key === " ") {
                 event.preventDefault();
