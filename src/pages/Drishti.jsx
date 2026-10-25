@@ -5,6 +5,7 @@ import DrishtiSection from "../sections/Events/Drishti/DrishtiSection";
 import Speaker from "../sections/Forms/Speaker";
 import Booknow from "../sections/Booknow";
 import DrishtiVideo from "../sections/Events/Drishti/DrishtiVideo";
+import TeamHeroSection from "../sections/Team/TeamHeroSection";
 
 const Drishti = () => {
   return (
@@ -16,6 +17,7 @@ const Drishti = () => {
       <DrishtiVideo />
       <DrishtiSection />
       <Speaker />
+      <TeamHeroSection isEventSection={true} />
       <PerspectiveSection />
     </div>
   );

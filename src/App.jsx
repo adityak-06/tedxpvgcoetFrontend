@@ -80,6 +80,7 @@ function App() {
               <Route path="/events/take-the-leap" element={<TakeTheLeap />} />
 
               <Route path="/team" element={<Team />} />
+              <Route path="/team-2025" element={<Team />} />
               <Route
                 path="/curation-team"
                 element={<TeamGrid teamKey="curation-team" />}
