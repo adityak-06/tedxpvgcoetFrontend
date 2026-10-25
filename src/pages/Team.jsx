@@ -1,5 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import TeamHeroSection from "../sections/Team/TeamHeroSection";
 import TeamDepartmentSection from "../sections/Team/TeamDepartmentSection";
 import FooterSection from "../sections/Common/FooterSection";
@@ -85,9 +84,9 @@ const departments = [
 const Team = () => {
   return (
     <div className="team-page" id="page-top">
-      <Helmet defer={false}>
+      
         <title>Team | TEDxPVGCOET</title>
-      </Helmet>
+      
       <TeamHeroSection />
       {departments.map((dept) => (
         <TeamDepartmentSection key={dept.id} {...dept} />

@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-import { Helmet } from "react-helmet";
 import bgVideo from "../../assets/backgrounds/background.mp4";
 import {
   Input,
@@ -471,9 +470,9 @@ export default function BillsUploadForm({
 
   return (
     <div style={styles.wrapper}>
-      <Helmet defer={false}>
+      
         <title>Internal Bills | TEDxPVGCOET</title>
-      </Helmet>
+      
       <style>{`
         @keyframes dropIn {
           0% { opacity: 0; transform: translateY(-30px) scale(0.98); }

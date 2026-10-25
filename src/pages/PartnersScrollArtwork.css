@@ -1,0 +1,49 @@
+
+.partners-scroll-artwork {
+  position: fixed;
+  top: 12vh;
+  right: -65px;
+  width: clamp(230px, 34vw, 430px);
+  aspect-ratio: 4 / 5;
+  z-index: 0;
+  opacity: 0.16;
+  pointer-events: none;
+  will-change: transform;
+  transform-origin: center;
+}
+
+.partners-scroll-artwork svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.partners-page {
+  position: relative;
+  isolation: isolate;
+}
+
+.partners-page > :not(.partners-scroll-artwork) {
+  position: relative;
+  z-index: 1;
+}
+
+.partners-scroll-artwork {
+  z-index: -1;
+}
+
+@media (max-width: 700px) {
+  .partners-scroll-artwork {
+    width: 260px;
+    right: -125px;
+    top: 18vh;
+    opacity: 0.1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .partners-scroll-artwork {
+    will-change: auto;
+  }
+}

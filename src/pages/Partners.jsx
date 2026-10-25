@@ -1,6 +1,5 @@
 
 import React from "react";
-import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import SponsorFeedbackSection from "../sections/Forms/SponsorFeedbackSection";
 import FooterSection from "../sections/Common/FooterSection";
@@ -68,13 +67,13 @@ const Partners = () => {
 
   return (
     <main className="partners-page">
-      <Helmet defer={false}>
+      
         <title>Our Partners | TEDxPVGCOET</title>
         <meta
           name="description"
           content="Meet the partners who help TEDxPVGCOET bring ideas worth spreading to life."
         />
-      </Helmet>
+      
 
       <section className="partners-hero">
         <p className="partners-eyebrow">TEDxPVGCOET</p>

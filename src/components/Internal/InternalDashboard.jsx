@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Helmet } from "react-helmet";
 import bgVideo from "../../assets/backgrounds/background.mp4";
 
 const styles = {
@@ -143,9 +142,9 @@ export default function InternalDashboard({
 
   return (
     <div style={styles.wrapper}>
-      <Helmet defer={false}>
+      
         <title>Portal | TEDxPVGCOETM</title>
-      </Helmet>
+      
       <style>{`
         @keyframes dropIn {
           0% { opacity: 0; transform: translateY(-20px); }

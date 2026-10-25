@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Helmet } from "react-helmet";
 import BridgekeeperAuth from "../components/Internal/BridgekeeperAuth";
 import QRCodeGenerator from "../components/Internal/QRCodeGenerator";
 import bgVideo from "../assets/backgrounds/background.mp4";
@@ -50,13 +49,13 @@ export default function InternalQRPage() {
   if (view === "qr") {
     return (
       <div className="ui-hero-container">
-        <Helmet>
+        
           <title>QR Code Generator | TEDxPVGCOET</title>
           <meta
             name="description"
             content="Generate high-resolution branded TEDx QR codes."
           />
-        </Helmet>
+        
 
         <video
           src={bgVideo}

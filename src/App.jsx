@@ -4,7 +4,6 @@ import Navbar from "./components/Navbar";
 import ScrollToTop from "./components/ScrollToTop";
 import Loader from "./components/Loader";
 import { inject } from "@vercel/analytics";
-import { Helmet } from "react-helmet";
 
 const Home = lazy(() => import("./pages/Home"));
 const SpeakerForm = lazy(() => import("./pages/SpeakerForm"));
@@ -18,9 +17,11 @@ const Team = lazy(() => import("./pages/Team"));
 const TeamGrid = lazy(() => import("./sections/Team/TeamGrid"));
 const TakeTheLeap = lazy(() => import("./pages/TakeTheLeap"));
 const ThemePage = lazy(() => import("./pages/ThemePage"));
+const Partners = lazy(() => import("./pages/Partners"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const InternalBillsPage = lazy(() => import("./pages/InternalBillsPage"));
 const ShipExperience = lazy(() => import("./pages/ShipExperience"));
+const ShipOfTheseusEvent = lazy(() => import("./pages/ShipOfTheseusEvent"));
 
 const NewTeam = lazy(() => import("./pages/NewTeam"));
 
@@ -48,12 +49,10 @@ function App() {
 
   return (
     <>
-      <Helmet>
-        <meta
-          name="google-site-verification"
-          content="efky2cFQbihVK_S-KaXPPK9S0J1-iJF7TMgFrAR8NXU"
-        />
-      </Helmet>
+      <meta
+        name="google-site-verification"
+        content="efky2cFQbihVK_S-KaXPPK9S0J1-iJF7TMgFrAR8NXU"
+      />
 
       <ScrollToTop />
 
@@ -73,6 +72,7 @@ function App() {
               <Route path="/events/Punarutthan" element={<Punarutthan />} />
               <Route path="/events/AvantGarde" element={<AvantGarde />} />
               <Route path="/events/TakeTheLeap" element={<TakeTheLeap />} />
+              <Route path="/partners" element={<Partners />} />
 
               <Route path="/team" element={<Team />} />
               <Route
@@ -116,6 +116,7 @@ function App() {
 
               <Route path="/about" element={<Home />} />
               <Route path="/ship" element={<ShipExperience />} />
+              <Route path="/ship-of-theseus" element={<ShipOfTheseusEvent />} />
               <Route path="/feedback" element={<FeedbackRedirect />} />
               <Route path="/cam" element={<CamRedirect />} />
 

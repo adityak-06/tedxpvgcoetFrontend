@@ -1,5 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import ScrollToTop from "../components/ScrollToTop";
 import EventHeroSection from "../sections/Events/Common/EventHeroSection";
 import PastEventSection from "../sections/Events/PastEvents/PastEventSection";
@@ -43,9 +42,9 @@ const pastEvents = [
 const Event = () => {
   return (
     <div id="page-top" className="event-page">
-      <Helmet defer={false}>
+      
         <title>Events | TEDxPVGCOET</title>
-      </Helmet>
+      
       <ScrollToTop />
       <EventHeroSection />
       {pastEvents.map((event) => (

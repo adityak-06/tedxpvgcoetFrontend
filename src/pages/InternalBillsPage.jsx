@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Helmet } from "react-helmet";
 import bgVideo from "../assets/backgrounds/background.mp4";
 import BridgekeeperAuth from "../components/Internal/BridgekeeperAuth";
 import BillsUploadForm from "../components/Internal/BillsUploadForm";
@@ -111,9 +110,9 @@ export default function InternalBillsPage() {
   if (view === "dashboard") {
     return (
       <div style={dashboardStyles.wrapper}>
-        <Helmet defer={false}>
+        
           <title>Portal | TEDxPVGCOETM</title>
-        </Helmet>
+        
         <video
           src={bgVideo}
           autoPlay
@@ -213,9 +212,9 @@ export default function InternalBillsPage() {
   if (view === "qrcode") {
     return (
       <div className="ui-hero-container">
-        <Helmet defer={false}>
+        
           <title>QR Generator | TEDxPVGCOETM</title>
-        </Helmet>
+        
         <video
           src={bgVideo}
           autoPlay

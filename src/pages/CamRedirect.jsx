@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { Helmet } from "react-helmet";
 
 function CamRedirect() {
   useEffect(() => {
@@ -8,9 +7,9 @@ function CamRedirect() {
 
   return (
     <>
-      <Helmet defer={false}>
+      
         <title>Redirecting... | TEDxPVGCOET</title>
-      </Helmet>
+      
       <p>Redirecting...</p>
     </>
   );

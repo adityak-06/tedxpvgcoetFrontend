@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import { Helmet } from "react-helmet";
 import FooterSection from "../sections/Common/FooterSection";
 import "./NewTeam.css";
 
@@ -83,9 +82,9 @@ const NewTeam = () => {
 
   return (
     <div className="new-committee-page" id="page-top">
-      <Helmet defer={false}>
+      
         <title>Committee | TEDxPVGCOET</title>
-      </Helmet>
+      
 
       {/* Desktop Background */}
       <div

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./SponsorFeedbackSection.css";
 
 import colombianBrewLogo from "../../assets/sponsors/colombianbrew.png";
@@ -54,6 +55,8 @@ const sponsorFeedback = [
 ];
 
 const SponsorFeedbackSection = () => {
+  const [selectedSponsor, setSelectedSponsor] = useState(null);
+
   return (
     <section className="sponsor-feedback-section">
       <div className="ui-glass-card sponsor-feedback-card">
@@ -67,26 +70,43 @@ const SponsorFeedbackSection = () => {
           </div>
         </div>
 
-        <div className="sponsor-feedback-list">
-          {sponsorFeedback.map((sponsor) => (
-            <article className="ui-subcard sponsor-feedback-item" key={sponsor.name}>
-              <div className="sponsor-feedback-content">
-                <div className="sponsor-feedback-logo-wrapper">
-                  <img
-                    src={sponsor.logo}
-                    alt={`${sponsor.name} logo`}
-                    className="sponsor-feedback-logo"
-                  />
-                </div>
+        <div className="sponsor-feedback-box">
+          <div className="sponsor-feedback-list">
+            {sponsorFeedback.map((sponsor) => {
+              const isSelected = selectedSponsor === sponsor.name;
+              return (
+                <article
+                  className={`ui-subcard sponsor-feedback-item${isSelected ? " is-selected" : ""}`}
+                  key={sponsor.name}
+                  role="button"
+                  tabIndex={0}
+                  aria-pressed={isSelected}
+                  onClick={() => setSelectedSponsor(isSelected ? null : sponsor.name)}
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter" || event.key === " ") {
+                      event.preventDefault();
+                      setSelectedSponsor(isSelected ? null : sponsor.name);
+                    }
+                  }}
+                >
+                  <div className="sponsor-feedback-content">
+                    <div className="sponsor-feedback-logo-wrapper">
+                      <img
+                        src={sponsor.logo}
+                        alt={`${sponsor.name} logo`}
+                        className="sponsor-feedback-logo"
+                      />
+                    </div>
 
-                <blockquote className="sponsor-feedback-quote">
-                  <span className="sponsor-feedback-quote-mark">“</span>
-                  <p>{sponsor.feedback}</p>
-                  <span className="sponsor-feedback-quote-mark closing">”</span>
-                </blockquote>
-              </div>
-            </article>
-          ))}
+                    <blockquote className="sponsor-feedback-quote">
+                      <span className="sponsor-feedback-quote-mark">“</span>
+                      <p>{sponsor.feedback}</p>
+                    </blockquote>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

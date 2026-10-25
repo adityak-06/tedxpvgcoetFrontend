@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import "../components/ui/ui.css";
 import bgVideo from "../assets/backgrounds/background.mp4";
@@ -10,9 +9,9 @@ const NotFound = () => {
 
   return (
     <div className="hero-container1" style={styles.wrapper}>
-      <Helmet defer={false}>
+      
         <title>404 - Page Not Found | TEDxPVGCOET</title>
-      </Helmet>
+      
       <style>{`
         @keyframes dropIn {
           0% {

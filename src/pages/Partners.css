@@ -109,12 +109,15 @@
 }
 
 .partners-sponsor-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 22px;
 }
 
 .partners-sponsor-card {
+  flex: 0 0 calc(25% - 17px);
+  box-sizing: border-box;
   min-width: 0;
   padding: 22px 18px;
   display: flex;
@@ -172,8 +175,8 @@
 }
 
 @media (max-width: 1000px) {
-  .partners-sponsor-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .partners-sponsor-card {
+    flex-basis: calc(33.333% - 15px);
   }
 }
 
@@ -203,11 +206,11 @@
   }
 
   .partners-sponsor-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 14px;
   }
 
   .partners-sponsor-card {
+    flex-basis: calc(50% - 7px);
     padding: 14px 10px;
     gap: 12px;
   }
@@ -223,8 +226,8 @@
 }
 
 @media (max-width: 380px) {
-  .partners-sponsor-grid {
-    grid-template-columns: 1fr;
+  .partners-sponsor-card {
+    flex-basis: 100%;
   }
 
   .partners-logo-wrap {
