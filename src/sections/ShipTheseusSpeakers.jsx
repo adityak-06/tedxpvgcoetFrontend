@@ -1,4 +1,10 @@
-import React, { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
+import React, {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from "react";
 import { createPortal } from "react-dom";
 import { FaGlobe, FaInstagram, FaLinkedin, FaTimes } from "react-icons/fa";
 import "./ShipTheseusSpeakers.css";
@@ -172,7 +178,7 @@ const ShipTheseusSpeakers = () => {
 
   const openProfile = (index) => {
     const useModal = window.matchMedia(
-      "(hover: none), (pointer: coarse)"
+      "(hover: none), (pointer: coarse)",
     ).matches;
     setActiveSpeaker(index);
     setIsModal(useModal);
@@ -191,7 +197,7 @@ const ShipTheseusSpeakers = () => {
 
       if (!isModal || event.key !== "Tab" || !panelRef.current) return;
       const focusable = panelRef.current.querySelectorAll(
-        'a[href], button:not([disabled])'
+        "a[href], button:not([disabled])",
       );
       if (!focusable.length) return;
       const first = focusable[0];
@@ -237,7 +243,7 @@ const ShipTheseusSpeakers = () => {
       const margin = 12;
       const left = Math.max(
         margin,
-        Math.min(rect.left, window.innerWidth - panelRect.width - margin)
+        Math.min(rect.left, window.innerWidth - panelRect.width - margin),
       );
       const below = rect.bottom + 12;
       const top =
@@ -272,12 +278,11 @@ const ShipTheseusSpeakers = () => {
       </header>
       <div className="theseus-speakers__grid">
         {speakers.map((speaker, index) => (
-          <article
-            className="theseus-speakers__card"
-            key={speaker.name}
-          >
+          <article className="theseus-speakers__card" key={speaker.name}>
             <div className="theseus-speakers__card-poster">
-              <span className="theseus-speakers__category">{speaker.title}</span>
+              <span className="theseus-speakers__category">
+                {speaker.title}
+              </span>
               {speaker.trimSideBars ? (
                 <span className="theseus-speakers__image-frame theseus-speakers__image-frame--trimmed">
                   <img
@@ -356,7 +361,9 @@ const ShipTheseusSpeakers = () => {
                 />
               </div>
               <div className="theseus-speakers__profile-content">
-                <p className="theseus-speakers__profile-eyebrow">{active.title}</p>
+                <p className="theseus-speakers__profile-eyebrow">
+                  {active.title}
+                </p>
                 <h3
                   className="theseus-speakers__profile-name"
                   id={`theseus-speaker-name-${activeSpeaker}`}
@@ -387,7 +394,7 @@ const ShipTheseusSpeakers = () => {
               </div>
             </section>
           </>,
-          document.body
+          document.body,
         )}
     </section>
   );
