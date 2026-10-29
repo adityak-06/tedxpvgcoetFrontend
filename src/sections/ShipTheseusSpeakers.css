@@ -3,10 +3,10 @@
   color: #fff;
   background-color: #171717;
   background-image:
-    radial-gradient(circle at top left, rgb(255 0 0 / 23%), transparent 17%),
-    radial-gradient(circle at 95% 30%, rgb(255 0 0 / 23%), transparent 17%),
-    radial-gradient(circle at 0% 60%, rgb(255 0 0 / 23%), transparent 17%),
-    radial-gradient(circle at 90% 96%, rgb(255 0 0 / 23%), transparent 17%);
+    radial-gradient(circle at top left, rgb(255 0 0 / 14%), transparent 17%),
+    radial-gradient(circle at 95% 30%, rgb(255 0 0 / 14%), transparent 17%),
+    radial-gradient(circle at 0% 60%, rgb(255 0 0 / 14%), transparent 17%),
+    radial-gradient(circle at 90% 96%, rgb(255 0 0 / 14%), transparent 17%);
   background-repeat: no-repeat;
 }
 
@@ -47,21 +47,58 @@
 }
 
 .theseus-speakers__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   min-width: 0;
 }
 
-.theseus-speakers__photo {
+.theseus-speakers__card-poster {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
   width: 100%;
   min-width: 0;
   text-align: center;
 }
 
-.theseus-speakers__photo img {
+.theseus-speakers__view-profile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.25rem;
+  margin: 1rem 0 0.25rem;
+  padding: 0.45rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.78);
+  border-radius: 999px;
+  background: rgba(12, 12, 12, 0.25);
+  color: #fff;
+  font-family: "Kantumruy Pro", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 160ms ease, border-color 160ms ease, transform 120ms ease;
+}
+
+.theseus-speakers__view-profile:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.theseus-speakers__view-profile:active {
+  transform: scale(0.98);
+}
+
+.theseus-speakers__view-profile:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+
+.theseus-speakers__card-poster > img {
   display: block;
   width: 100%;
   max-width: 350px;
@@ -69,6 +106,7 @@
   aspect-ratio: 1;
   object-fit: contain;
   margin-top: 0.75rem;
+  filter: saturate(0.84);
 }
 
 .theseus-speakers__image-frame--trimmed {
@@ -89,6 +127,7 @@
   margin: 0;
   object-fit: unset;
   transform: translateX(-50%);
+  filter: saturate(0.84);
 }
 
 .theseus-speakers__category {
@@ -99,6 +138,143 @@
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+}
+
+.theseus-speakers__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: rgba(0, 0, 0, 0.72);
+  cursor: default;
+}
+
+.theseus-speakers__profile {
+  position: fixed;
+  z-index: 10001;
+  display: grid;
+  grid-template-columns: minmax(130px, 36%) minmax(0, 1fr);
+  width: min(500px, calc(100vw - 24px));
+  height: min(460px, calc(100vh - 24px));
+  max-height: calc(100vh - 24px);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 10px;
+  background: #151515;
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.42);
+  color: #fff;
+  animation: theseus-profile-enter 180ms ease-out both;
+}
+
+@keyframes theseus-profile-enter {
+  from { opacity: 0; translate: 0 10px; }
+  to { opacity: 1; translate: 0 0; }
+}
+
+.theseus-speakers__profile-image-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 150px;
+  overflow: hidden;
+  background: #090909;
+}
+
+.theseus-speakers__profile-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  filter: saturate(0.84);
+}
+
+.theseus-speakers__profile-content {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 2rem 1.35rem 1.25rem;
+}
+
+.theseus-speakers__profile-eyebrow {
+  margin: 0 2rem 0.4rem 0;
+  color: #e10600;
+  font-family: "Kantumruy Pro", sans-serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.theseus-speakers__profile-name {
+  margin: 0;
+  color: #fff;
+  font-family: "Kantumruy Pro", sans-serif;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.theseus-speakers__profile-biography {
+  margin: 0.8rem 0 1rem;
+  overflow-y: auto;
+  color: #e6e6e6;
+  font-size: 0.94rem;
+  line-height: 1.55;
+  overscroll-behavior: contain;
+}
+
+.theseus-speakers__profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: auto;
+  padding-top: 0.65rem;
+}
+
+.theseus-speakers__profile-links a,
+.theseus-speakers__profile-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.65rem;
+  height: 2.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.07);
+  color: #fff;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: background-color 160ms ease, border-color 160ms ease;
+}
+
+.theseus-speakers__profile-links a:hover,
+.theseus-speakers__profile-close:hover {
+  border-color: #a93430;
+  background: #a93430;
+}
+
+.theseus-speakers__profile-close {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.65rem;
+  z-index: 1;
+  width: 2.35rem;
+  height: 2.35rem;
+  padding: 0;
+  cursor: pointer;
+}
+
+.theseus-speakers__profile-close:focus-visible,
+.theseus-speakers__profile-links a:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
 }
 
 @media (min-width: 992px) {
@@ -122,12 +298,12 @@
     min-height: 450px;
   }
 
-  .theseus-speakers__photo {
-    min-height: 450px;
-    height: 100%;
+  .theseus-speakers__card-poster {
+    flex: 1;
+    min-height: 390px;
   }
 
-  .theseus-speakers__photo img {
+  .theseus-speakers__card-poster > img {
     max-width: 380px;
   }
 
@@ -139,20 +315,76 @@
     padding-top: 1rem;
     font-size: 1.2rem;
   }
+
+  .theseus-speakers__view-profile {
+    margin-top: 0.65rem;
+    margin-bottom: 0;
+  }
 }
 
 @media (min-width: 1200px) {
   .theseus-speakers__grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2rem;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .theseus-speakers {
     padding: 3rem 1rem;
   }
 
   .theseus-speakers__grid {
     gap: 2rem;
+  }
+
+  .theseus-speakers__view-profile {
+    min-height: 2.5rem;
+    padding-right: 1.05rem;
+    padding-left: 1.05rem;
+  }
+
+  .theseus-speakers__profile--modal {
+    top: 50% !important;
+    left: 50% !important;
+    display: flex;
+    flex-direction: column;
+    width: min(520px, calc(100vw - 28px));
+    max-height: calc(100vh - 28px);
+    max-height: calc(100dvh - 28px);
+    transform: translate(-50%, -50%);
+  }
+
+  .theseus-speakers__profile--modal .theseus-speakers__profile-image-wrap {
+    flex: 0 0 clamp(150px, 31vh, 235px);
+    min-height: 0;
+  }
+
+  .theseus-speakers__profile--modal .theseus-speakers__profile-image {
+    max-height: 100%;
+  }
+
+  .theseus-speakers__profile--modal .theseus-speakers__profile-content {
+    overflow-y: auto;
+    padding: 1.1rem 1.2rem 1.2rem;
+  }
+
+  .theseus-speakers__profile--modal .theseus-speakers__profile-biography {
+    overflow: visible;
+  }
+
+  .theseus-speakers__profile--modal .theseus-speakers__profile-close {
+    border-color: rgba(255, 255, 255, 0.7);
+    background: rgba(0, 0, 0, 0.75);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theseus-speakers__profile,
+  .theseus-speakers__profile-links a,
+  .theseus-speakers__profile-close,
+  .theseus-speakers__view-profile {
+    animation: none;
+    transition: none;
   }
 }
